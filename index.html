@@ -5,7 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tatuajes y Velas - InkFranchesca</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Indie+Flower&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <style>
+    .producto-card img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -14,6 +26,7 @@
       <ul>
         <li><a href="#productos">Productos</a></li>
         <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#carrito">Carrito</a></li>
       </ul>
     </nav>
   </header>
@@ -21,61 +34,69 @@
   <main>
     <section id="productos">
       <h2>Productos Destacados</h2>
-      <div class="producto-card">
-        <img src="images\tatuaje1.jpg" alt="Tatuaje Floral con Nombre">
-        <div class="producto-info">
-          <h3>Tatuaje Floral con Nombre</h3>
-          <p>Este diseño combina la elegancia de las flores con la delicadeza del nombre "Francesca", creando una pieza única.</p>
+      <div class="carousel">
+        <!-- Producto 1 -->
+        <div class="producto-card">
+          <img src="images/tatuaje1.jpg" alt="Tatuaje Floral con Nombre">
+          <div class="producto-info">
+            <h3>Tatuaje Floral con Nombre</h3>
+            <p>Este diseño combina la elegancia de las flores con la delicadeza del nombre "Francesca", creando una pieza única.</p>
+            <button class="agregar-carrito" data-producto="Tatuaje Floral con Nombre" data-precio="50">Agregar al carrito</button>
+          </div>
         </div>
-      </div>
-
-      <div class="producto-card">
-        <img src="images/tatuaje.jpg" alt="Tatuaje Minimalista">
-        <div class="producto-info">
-          <h3>Tatuaje Minimalista en el Brazo</h3>
-          <p>Ideal para quienes buscan un tatuaje sutil pero significativo, este diseño del nombre "Francesca" en el antebrazo es perfecto.</p>
+        <!-- Producto 2 -->
+        <div class="producto-card">
+          <img src="images/tatuaje.jpg" alt="Tatuaje Minimalista">
+          <div class="producto-info">
+            <h3>Tatuaje Minimalista en el Brazo</h3>
+            <p>Ideal para quienes buscan un tatuaje sutil pero significativo, este diseño del nombre "Francesca" en el antebrazo es perfecto.</p>
+            <button class="agregar-carrito" data-producto="Tatuaje Minimalista en el Brazo" data-precio="40">Agregar al carrito</button>
+          </div>
         </div>
-      </div>
-
-      <div class="producto-card">
-        <img src="images/tatuaje2.jpg" alt="Tatuaje con Corazón">
-        <div class="producto-info">
-          <h3>Tatuaje con Corazón</h3>
-          <p>Incorpora el símbolo del amor con este diseño que combina el nombre "Francesca" y un corazón, representando conexión.</p>
+        <!-- Producto 3 -->
+        <div class="producto-card">
+          <img src="images/tatuaje2.jpg" alt="Tatuaje con Corazón">
+          <div class="producto-info">
+            <h3>Tatuaje con Corazón</h3>
+            <p>Incorpora el símbolo del amor con este diseño que combina el nombre "Francesca" y un corazón, representando conexión.</p>
+            <button class="agregar-carrito" data-producto="Tatuaje con Corazón" data-precio="45">Agregar al carrito</button>
+          </div>
         </div>
-      </div>
-
-      <div class="producto-card">
-        <img src="images/7a2f3dc4-a53b-4fea-9849-87f8b3661e1a.jpg" alt="Love Heart Tattoo Candle">
-        <div class="producto-info">
-          <h3>Love Heart Tattoo Candle</h3>
-          <p>Vela aromática con notas de lavanda, vainilla y bergamota, creando una atmósfera única y acogedora.</p>
+        <!-- Producto 4 -->
+        <div class="producto-card">
+          <img src="images/7a2f3dc4-a53b-4fea-9849-87f8b3661e1a.jpg" alt="Love Heart Tattoo Candle">
+          <div class="producto-info">
+            <h3>Love Heart Tattoo Candle</h3>
+            <p>Vela aromática con notas de lavanda, vainilla y bergamota, creando una atmósfera única y acogedora.</p>
+            <button class="agregar-carrito" data-producto="Love Heart Tattoo Candle" data-precio="30">Agregar al carrito</button>
+          </div>
         </div>
       </div>
     </section>
 
-
     <section id="video">
-        <h2>Conocé nuestro arte en acción</h2>
-        <div class="video-container">
-          <video width="20%" controls>
-            <source src="video/tiktok.mp4" type="video/mp4">
-            Tu navegador no soporta el video.
-          </video>
-        </div>
-      </section>
+      <h2>Conocé nuestro arte en acción</h2>
+      <div class="video-container">
+        <video class="video" controls>
+          <source src="video/SnapInsta.to_AQN43GOt-TN3ybqr-0AU3BpiZ_jN43WWcByJ4baBCdtC4LQeWp3W2F-cWXWIlHGwFekFC9D9Wv2JgL4C9wnMkowhIDHjhRcMn7CPU5E.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+        <video class="video" controls>
+          <source src="video/tiktok.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+      </div>
+    </section>
 
-  
-
-      <section id="video">
-        <h2>Conocé nuestro arte en acción</h2>
-        <div class="video-container">
-          <video width="20%" controls>
-            <source src="video/SnapInsta.to_AQN43GOt-TN3ybqr-0AU3BpiZ_jN43WWcByJ4baBCdtC4LQeWp3W2F-cWXWIlHGwFekFC9D9Wv2JgL4C9wnMkowhIDHjhRcMn7CPU5E.mp4" type="video/mp4">
-            Tu navegador no soporta el video.
-          </video>
-        </div>
-      </section>
+    <section id="carrito">
+      <h2>Carrito de Compras</h2>
+      <div id="carrito-contenido">
+        <p>No hay productos en el carrito.</p>
+      </div>
+      <p>Total: $<span id="total-carrito">0</span></p>
+      <button id="vaciar-carrito">Vaciar Carrito</button>
+      <button id="generar-compra">Generar Compra</button>
+    </section>
 
     <section id="contacto">
       <h2>Formulario de Contacto</h2>
@@ -91,27 +112,124 @@
     </section>
 
     <section id="resenas">
-        <h2>Reseñas</h2>
-        <div class="resenas-grid">
-            <div class="resena">
-                <p>"Las velas son de un aroma riquisimo."</p>
-                <strong>- Juan Pérez</strong>
-            </div>
-            <div class="resena">
-                <p>"Nunca fui tan feliz con un tatuaje como con este."</p>
-                <strong>- Laura Gómez</strong>
-            </div>
-            <div class="resena">
-                <p>"Excelente trabajo, me encantó..."</p>
-                <strong>- Martín López</strong>
-            </div>
+      <h2>Reseñas</h2>
+      <div class="resenas-grid">
+        <div class="resena">
+          <p>"Las velas son de un aroma riquísimo."</p>
+          <strong>- Juan Pérez</strong>
         </div>
+        <div class="resena">
+          <p>"Nunca fui tan feliz con un tatuaje como con este."</p>
+          <strong>- Laura Gómez</strong>
+        </div>
+        <div class="resena">
+          <p>"Excelente trabajo, me encantó..."</p>
+          <strong>- Martín López</strong>
+        </div>
+      </div>
     </section>
-
   </main>
 
   <footer>
     <p>&copy; 2025 InkFranchesca. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    $(document).ready(function() {
+      $('.carousel').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true,
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+      function actualizarCarrito() {
+        $('#carrito-contenido').empty();
+        let total = 0;
+
+        if (carrito.length === 0) {
+          $('#carrito-contenido').html('<p>No hay productos en el carrito.</p>');
+        } else {
+          carrito.forEach((item, index) => {
+            const subtotal = item.precio * item.cantidad;
+            total += subtotal;
+
+            $('#carrito-contenido').append(`
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <span><strong>${item.producto}</strong> - $${item.precio} x ${item.cantidad} = $${subtotal}</span>
+                <div>
+                  <button class="btn-menos" data-index="${index}">−</button>
+                  <button class="btn-mas" data-index="${index}">+</button>
+                </div>
+              </div>
+            `);
+          });
+        }
+        $('#total-carrito').text(total);
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+      }
+
+      $('.agregar-carrito').click(function() {
+        const producto = $(this).data('producto');
+        const precio = $(this).data('precio');
+        const existente = carrito.find(item => item.producto === producto);
+
+        if (existente) {
+          existente.cantidad += 1;
+        } else {
+          carrito.push({ producto, precio, cantidad: 1 });
+        }
+
+        actualizarCarrito();
+      });
+
+      $('#carrito-contenido').on('click', '.btn-mas', function() {
+        const index = $(this).data('index');
+        carrito[index].cantidad += 1;
+        actualizarCarrito();
+      });
+
+      $('#carrito-contenido').on('click', '.btn-menos', function() {
+        const index = $(this).data('index');
+        if (carrito[index].cantidad > 1) {
+          carrito[index].cantidad -= 1;
+        } else {
+          carrito.splice(index, 1);
+        }
+        actualizarCarrito();
+      });
+
+      $('#vaciar-carrito').click(function() {
+        carrito = [];
+        actualizarCarrito();
+      });
+
+      $('#generar-compra').click(function() {
+        let total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+        if (total > 0) {
+          alert(`¡Gracias por tu compra! Total a pagar: $${total}`);
+          carrito = [];
+          actualizarCarrito();
+        } else {
+          alert('El carrito está vacío.');
+        }
+      });
+
+      actualizarCarrito();
+    });
+  </script>
 </body>
 </html>
